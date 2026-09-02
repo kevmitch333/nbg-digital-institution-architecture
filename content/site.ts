@@ -1,0 +1,22 @@
+export const architectureLayers = [
+  {n:'01',name:'AI Intelligence & Orchestration',purpose:'Understand, reason, coordinate and act.',problem:'Turns expanding technical capability into useful institutional decisions.',tech:'AI models · agents · research · simulation',examples:'AGONiQ · Patients Intelligence',partners:'AI platforms · cloud · research institutions'},
+  {n:'02',name:'Data, Evidence & Observability',purpose:'Make activity measurable and accountable.',problem:'Creates the evidence required to evaluate systems and outcomes.',tech:'Telemetry · analytics · audit trails · evidence systems',examples:'AGONiQ · Patients Intelligence',partners:'Data infrastructure · universities · health systems'},
+  {n:'03',name:'Institutional Governance',purpose:'Determine what is permitted, accountable and trusted.',problem:'Establishes oversight, controls and legitimacy.',tech:'Rules · permissions · appeals · human oversight',examples:'Patients Intelligence · AGONiQ',partners:'Standards bodies · institutions · policy experts'},
+  {n:'04',name:'Identity & Reputation',purpose:'Establish who participated and what they demonstrated.',problem:'Makes verified achievement portable across institutions.',tech:'Digital identity · credentials · reputation',examples:'AGONiQ',partners:'Universities · employers · identity providers'},
+  {n:'05',name:'Rights & Provenance',purpose:'Establish who created, owns, licenses or contributed.',problem:'Clarifies attribution and permissions in AI-enabled markets.',tech:'Rights registries · attestations · licensing',examples:'EsportsX · NBG asset registry research',partners:'Creators · IP platforms · licensing partners'},
+  {n:'06',name:'Economic & Settlement Infrastructure',purpose:'Move value between participants.',problem:'Enables transparent, appropriate participation in new markets.',tech:'Payments · settlement · royalties · controls',examples:'Tubaron / Cabo Verde · EsportsX',partners:'Payment providers · sponsors · commerce platforms'},
+  {n:'07',name:'Community & Participation',purpose:'Convert infrastructure into real ecosystems.',problem:'Connects systems to people, institutions and local context.',tech:'Education · media · community funding · marketplaces',examples:'Tubaron / Cabo Verde',partners:'Communities · educators · regional operators'},
+];
+export const ventures=[
+  {name:'AGONiQ',stage:'Architecture in development',category:'Human–AI Performance Infrastructure',problem:'How do organizations measure and develop human–AI capability?',emphasis:'Intelligence · Trust · Identity · Credentials · Governance',need:'Universities · employers · AI platforms'},
+  {name:'Patients Intelligence',stage:'Exploratory initiative',category:'Patient-Centered AI',problem:'How should patient-generated AI intelligence enter clinical systems responsibly?',emphasis:'Intelligence · Trust · Governance · Evidence · Human escalation',need:'Health systems · researchers · patient advocates'},
+  {name:'Tubaron / Cabo Verde',stage:'Ecosystem concept',category:'Coordinated Regional Infrastructure',problem:'How can culture, sport, education, diaspora and opportunity connect through shared infrastructure?',emphasis:'Community · Economic participation · Ownership · Media · Governance',need:'Regional operators · diaspora leaders · institutions'},
+  {name:'EsportsX',stage:'Portfolio development',category:'Esports IP & Licensing',problem:'How can esports IP, education, brands and operating assets be structured for scalable licensing?',emphasis:'Ownership · Rights · Licensing · Education · Media · Commerce',need:'Operators · educators · licensing partners'},
+];
+export const researchTracks=[
+  ['01','Verifiable Human–AI Credentials','AGONiQ','Can competency records become independently verifiable and portable between universities, employers and institutions?'],
+  ['02','Digital Asset & IP Registry','National Brand Group','Can NBG structure provenance and rights across domains, brands, research, media, curricula and software?'],
+  ['03','Programmable Global Settlement','Portfolio-wide research','How can global partnerships, royalties, prize payments, sponsorships and grants settle more transparently?'],
+  ['04','Transparent Community Funding','Tubaron / Cabo Verde','Can participants better understand how funding moves and what outcomes it produces?'],
+  ['05','Creator & Producer Economics','Cross-portfolio research','Can provenance and programmable revenue-sharing improve creator participation?'],
+];
