@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './enhancements.css';
 
 export const metadata: Metadata = {
   title: 'National Brand Group | Institution Studio',
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body>
-        <a className="skip-link" href="#model">Skip to content</a>{children}
+        <a className="skip-link" href="#main-content">Skip to content</a><span id="main-content" />{children}
       </body>
     </html>
   );
