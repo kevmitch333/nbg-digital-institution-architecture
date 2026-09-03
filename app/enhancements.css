@@ -152,6 +152,38 @@ footer > p a {
   color: #c8cef2;
 }
 
+.portfolio-context {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: -25px 0 55px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.portfolio-context article {
+  min-height: 230px;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(71, 104, 255, .06), transparent 52%);
+}
+
+.portfolio-context span {
+  color: #6f80d6;
+  font: 10px monospace;
+}
+
+.portfolio-context h3 {
+  margin: 58px 0 14px;
+  font: 400 24px/1.1 Georgia;
+}
+
+.portfolio-context p {
+  color: #9498a4;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
 @media (max-width: 900px) {
   .founder-hero-grid {
     grid-template-columns: 1fr;
@@ -161,6 +193,9 @@ footer > p a {
     justify-self: start;
   }
   .principle-grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-context {
     grid-template-columns: 1fr;
   }
 }
