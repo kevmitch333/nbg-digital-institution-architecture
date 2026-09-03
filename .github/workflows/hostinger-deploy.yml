@@ -51,7 +51,6 @@ jobs:
         run: |
           cp -a out/. "$RUNNER_TEMP/hostinger-site"
           git switch --orphan hostinger-deploy
-          git rm -rf .
           cp -a "$RUNNER_TEMP/hostinger-site/." .
           git add -A
           git config user.name "github-actions[bot]"
