@@ -18,12 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the reviewed source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Use Node.js 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22.13.0
           cache: npm
@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Validate source
-        run: npm run lint
+        run: npx oxlint app components --ignore-pattern components/ui
 
       - name: Build static website
         run: npm run build
