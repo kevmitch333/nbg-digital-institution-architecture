@@ -2380,6 +2380,9 @@ textarea:focus-visible {
 .career-tab-panel {
   width: 100%;
 }
+.record .career-panel article {
+  grid-template-columns: minmax(220px, 0.7fr) 1.3fr;
+}
 .consulting-intro {
   padding: 28px 0 34px;
   border-top: 1px solid var(--line);
@@ -2712,6 +2715,9 @@ textarea:focus-visible {
   .advisory-list article {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+  .record .career-panel article {
+    grid-template-columns: 1fr;
   }
   .founder-hero-band {
     grid-template-columns: 1fr 1fr;
