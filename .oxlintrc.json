@@ -27,6 +27,8 @@
     "build/**",
     "dist/**",
     "coverage/**",
+    "components/ui/**",
+    "components/durable-link.tsx",
     "next-env.d.ts"
   ],
   "rules": {
