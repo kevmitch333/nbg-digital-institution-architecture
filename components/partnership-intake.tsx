@@ -1,4 +1,78 @@
 'use client';
 import { useState } from 'react';
-const paths=['Technology partner','Institutional partner','Strategic investor','Operating partner','Community & market partner','Media & research'];
-export function PartnershipIntake(){const [path,setPath]=useState('');const [sent,setSent]=useState(false);if(sent)return <output className="success"><span>Conversation started</span><h3>Thank you for reaching out.</h3><p>This prototype records no data. Connect the production intake system before launch.</p></output>;return <form className="intake" onSubmit={e=>{e.preventDefault();setSent(true)}}><fieldset><legend>I’m approaching NBG as a…</legend><div className="path-grid">{paths.map(x=><button type="button" aria-pressed={path===x} onClick={()=>setPath(x)} key={x}>{x}</button>)}</div></fieldset>{path&&<div className="intake-fields"><label>Name<input name="name" required/></label><label>Organization<input name="organization" required/></label><label>Email<input type="email" name="email" required/></label><label>What could we build together?<textarea name="message" required rows={4}/></label><button className="button primary" type="submit">Start the conversation</button></div>}</form>}
+const paths = [
+  'Technology partner',
+  'Institutional partner',
+  'Strategic investor',
+  'Operating partner',
+  'Community & market partner',
+  'Media & research',
+];
+export function PartnershipIntake() {
+  const [path, setPath] = useState('');
+  return (
+    <form
+      className="intake"
+      onSubmit={(e) => {
+        e.preventDefault();
+        const data = new FormData(e.currentTarget);
+        const field = (name: string) => {
+          const value = data.get(name);
+          return typeof value === 'string' ? value : '';
+        };
+        const subject = `NBG partnership inquiry — ${path}`;
+        const body = [
+          `Partnership path: ${path}`,
+          `Name: ${field('name')}`,
+          `Organization: ${field('organization')}`,
+          `Email: ${field('email')}`,
+          '',
+          field('message'),
+        ].join('\n');
+        window.location.href = `mailto:hello@nationalbrandgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }}
+    >
+      <fieldset>
+        <legend>I’m approaching NBG as a…</legend>
+        <div className="path-grid">
+          {paths.map((x) => (
+            <button
+              type="button"
+              aria-pressed={path === x}
+              onClick={() => setPath(x)}
+              key={x}
+            >
+              {x}
+            </button>
+          ))}
+        </div>
+      </fieldset>
+      {path && (
+        <div className="intake-fields">
+          <label>
+            Name
+            <input name="name" autoComplete="name" required />
+          </label>
+          <label>
+            Organization
+            <input name="organization" autoComplete="organization" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autoComplete="email" required />
+          </label>
+          <label>
+            What could we build together?
+            <textarea name="message" required rows={4} />
+          </label>
+          <button className="button primary" type="submit">
+            Continue by email
+          </button>
+          <p className="intake-note">
+            Opens your email app. This site does not store your information.
+          </p>
+        </div>
+      )}
+    </form>
+  );
+}
