@@ -46,7 +46,10 @@ export default async function VenturePage({
   if (!v) notFound();
   const image = ventureImagery[v.slug];
   return (
-    <main id="main-content" className="detail-page">
+    <main
+      id="main-content"
+      className={`detail-page venture-detail venture-${v.slug}`}
+    >
       <SourcePageNav backLabel="Portfolio" backHref="/ventures" />
       <section className="detail-hero">
         <div>
@@ -56,7 +59,7 @@ export default async function VenturePage({
           </p>
           <h1>{v.name}</h1>
         </div>
-        <blockquote>{v.question}</blockquote>
+        <blockquote>{v.statement}</blockquote>
       </section>
       {image && (
         <figure className="venture-hero-image">
@@ -77,7 +80,13 @@ export default async function VenturePage({
         <div className="detail-main">
           <div className="section-index">Institutional thesis</div>
           <p className="detail-lede">{v.description}</p>
-          <h2>Architecture in practice</h2>
+          <div className="venture-narrative">
+            <h2>{v.narrativeTitle}</h2>
+            {v.narrative.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <h2>What is being developed</h2>
           <div className="system-list">
             {v.systems.map((x, i) => (
               <div key={x}>
@@ -86,6 +95,15 @@ export default async function VenturePage({
               </div>
             ))}
           </div>
+          {v.relatedConcepts && (
+            <div className="related-concepts">
+              <h2>Concepts within the AGONiQ architecture</h2>
+              {v.relatedConcepts.map((concept) => (
+                <p key={concept}>{concept}</p>
+              ))}
+            </div>
+          )}
+          {v.note && <p className="detail-note">{v.note}</p>}
         </div>
         <aside>
           <div>
@@ -109,7 +127,7 @@ export default async function VenturePage({
       <section className="detail-cta">
         <div>
           <span className="section-index">Build with NBG</span>
-          <h2>Does this institutional problem connect to your work?</h2>
+          <h2>Bring the right capability to the next stage.</h2>
         </div>
         <Link className="button primary" href="/partnerships">
           Start a conversation <ArrowUpRight size={15} />

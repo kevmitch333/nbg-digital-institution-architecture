@@ -169,7 +169,9 @@ export default function Home() {
                 <span>0{i + 1}</span>
                 {(() => {
                   const Icon = pillarIcons[i];
-                  return <Icon size={19} strokeWidth={1.35} aria-hidden="true" />;
+                  return (
+                    <Icon size={19} strokeWidth={1.35} aria-hidden="true" />
+                  );
                 })()}
               </div>
               <h3>{p}</h3>
@@ -189,8 +191,8 @@ export default function Home() {
             <span className="section-index">Institutional flywheel</span>
             <h3>Four forces. One institutional system.</h3>
             <p>
-              Intelligence becomes durable when trust, ownership and
-              governance move with it.
+              Intelligence becomes durable when trust, ownership and governance
+              move with it.
             </p>
           </div>
           <div
@@ -312,14 +314,13 @@ export default function Home() {
         <div className="section-head">
           <div className="section-index">06 / PORTFOLIO AS PROOF</div>
           <h2>
-            Different stages.
+            Four focused ventures.
             <br />
             Shared architecture.
           </h2>
           <p>
-            The portfolio distinguishes strategic priorities, architecture
-            extensions and developing concepts. Each initiative shows its
-            purpose, current stage and partnership focus.
+            Each initiative has a distinct opportunity, development path and
+            partnership focus—supported by NBG’s shared institutional method.
           </p>
         </div>
         <PortfolioGrid />

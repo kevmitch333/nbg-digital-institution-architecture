@@ -81,16 +81,6 @@ const currentBuilds = [
     '/ventures/esportsx',
     'Esports intellectual property, education and licensing architecture',
   ],
-  [
-    'Artist Intel',
-    '/ventures/artist-intel',
-    'Rights-aware career and decision intelligence for artists',
-  ],
-  [
-    'Estate Me',
-    '/ventures/estate-me',
-    'Privacy-conscious digital legacy and estate coordination',
-  ],
 ];
 
 export default function Founder() {
@@ -149,14 +139,35 @@ export default function Founder() {
         </div>
       </section>
 
-      <section className="founder-image-pair" aria-label="Career fields in practice">
+      <section
+        className="founder-image-pair"
+        aria-label="Career fields in practice"
+      >
         <figure>
-          <img src="/images/artist-intel-studio.webp" alt="An artist and creative team reviewing career intelligence in a studio." width="1672" height="941" loading="lazy" />
-          <figcaption><span>Culture + rights</span> Artist development, media and ownership.</figcaption>
+          <img
+            src="/images/artist-intel-studio.webp"
+            alt="An artist and creative team reviewing career intelligence in a studio."
+            width="1672"
+            height="941"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>Culture + rights</span> Artist development, media and
+            ownership.
+          </figcaption>
         </figure>
         <figure>
-          <img src="/images/college-esports-lab-alt-02.webp" alt="White and Asian college esports students collaborating in a campus computer lab." width="1672" height="941" loading="lazy" />
-          <figcaption><span>Education + competition</span> Collegiate ecosystems and human performance.</figcaption>
+          <img
+            src="/images/college-esports-lab-alt-02.webp"
+            alt="White and Asian college esports students collaborating in a campus computer lab."
+            width="1672"
+            height="941"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>Education + competition</span> Collegiate ecosystems and human
+            performance.
+          </figcaption>
         </figure>
       </section>
 
@@ -179,8 +190,8 @@ export default function Founder() {
         <div className="record-heading">
           <div className="section-index">Expanded career record</div>
           <p>
-            Selected milestones across culture, media, education, technology
-            and venture development.
+            Selected milestones across culture, media, education, technology and
+            venture development.
           </p>
         </div>
         <CareerRecordTabs />
@@ -253,16 +264,14 @@ export default function Founder() {
             target="_blank"
             rel="noreferrer"
           >
-            Pollstar · Nappy Roots management profile{' '}
-            <ExternalLink size={13} />
+            Pollstar · Nappy Roots management profile <ExternalLink size={13} />
           </a>
           <a
             href="https://www.televisionconference.com/speaker/kevin-mitchell/"
             target="_blank"
             rel="noreferrer"
           >
-            Future of Television · speaker profile{' '}
-            <ExternalLink size={13} />
+            Future of Television · speaker profile <ExternalLink size={13} />
           </a>
           <a
             href="https://www.edx.org/bio/kevin-mitchell"

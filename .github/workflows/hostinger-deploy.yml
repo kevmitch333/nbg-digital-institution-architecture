@@ -44,7 +44,7 @@ jobs:
           test -f out/founder/index.html
           test -f out/advisory/index.html
           test -f out/404.html
-          test "$(find out/ventures -mindepth 2 -maxdepth 2 -name index.html | wc -l)" -eq 10
+          test "$(find out/ventures -mindepth 2 -maxdepth 2 -name index.html | wc -l)" -eq 4
 
       - name: Publish finished files to hostinger-deploy
         shell: bash
