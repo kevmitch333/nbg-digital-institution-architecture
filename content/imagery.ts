@@ -13,7 +13,7 @@ export const ventureImagery: Record<string, VentureImage> = {
   'patients-intelligence': {
     src: '/images/patients-intelligence-guided-review-v2.webp',
     alt: 'A patient leads a collaborative review of prepared health information with a clinician and patient advocate.',
-    position: 'center 45%',
+    position: 'center 15%',
   },
   'tubaron-cabo-verde': {
     src: '/images/tubaron-community-innovation-v2.webp',
