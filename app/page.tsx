@@ -104,8 +104,8 @@ export default function Home() {
       <section className="home-visual-story" aria-label="NBG work in practice">
         <figure className="visual-story-primary">
           <img
-            src="/images/ai-strategy-meeting-alt-02.webp"
-            alt="A diverse group of business and technology leaders reviewing data together."
+            src="/images/nbg-civic-infrastructure-review-v1.png"
+            alt="An African civic innovation leader reviews plans with a multidisciplinary team at a public infrastructure site."
             width="1672"
             height="941"
           />

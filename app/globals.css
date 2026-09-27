@@ -2628,6 +2628,9 @@ textarea:focus-visible {
   .venture-hero-image {
     height: 390px;
   }
+  .source-image-band-right img {
+    object-position: 35% 38%;
+  }
   .source-image-band figcaption,
   .venture-hero-image figcaption {
     padding-left: 22px;

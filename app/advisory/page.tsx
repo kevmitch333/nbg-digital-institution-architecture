@@ -27,7 +27,7 @@ export default function Advisory() {
         </p>
       </section>
       <figure className="source-image-band">
-        <img src="/images/ai-strategy-meeting-alt-02.webp" alt="White and Asian business leaders discussing artificial intelligence and data strategy." width="1672" height="941" loading="lazy" />
+        <img src="/images/nbg-university-strategy-forum-v1.png" alt="A white male strategy lead facilitates an institutional planning forum with university, technology, and civic leaders." width="1672" height="941" loading="lazy" />
         <figcaption><span>Strategic advisory</span> Align the institutional problem, decision-makers and evidence before committing to technology.</figcaption>
       </figure>
       <section className="advisory-list">

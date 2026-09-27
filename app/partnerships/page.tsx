@@ -28,7 +28,7 @@ export default function PartnershipsPage() {
         <p>NBG collaborates with organizations that can connect institutional problems to evidence, technology, operating capability, rights, capital or community participation.</p>
       </section>
       <figure className="source-image-band source-image-band-right">
-        <img src="/images/ai-strategy-meeting.webp" alt="A diverse group of colleagues collaborating around a large data display." width="1672" height="941" loading="lazy" />
+        <img src="/images/nbg-partnership-design-studio-v1.png" alt="An African male design lead guides a multidisciplinary partnership team around a physical prototype in an adaptive-reuse studio." width="1672" height="941" loading="lazy" />
         <figcaption><span>Complementary capability</span> The strongest systems combine institutional reach, operating experience and shared evidence.</figcaption>
       </figure>
       <section className="source-section">
