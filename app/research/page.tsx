@@ -25,8 +25,8 @@ export default function ResearchPage() {
         <p>NBG investigates the shared infrastructure required for trusted participation in emerging digital markets. Research is tied to a venture, institutional need or testable operating hypothesis.</p>
       </section>
       <figure className="source-image-band">
-        <img src="/images/college-esports-lab-alt-02.webp" alt="White and Asian college esports students collaborating with a coach in a campus computer lab." width="1672" height="941" loading="lazy" />
-        <figcaption><span>Evidence in practice</span> Research becomes useful when people can test, observe and improve real performance.</figcaption>
+        <img src="/images/nbg-ar-research-prototype-v1.png" alt="A Black male graduate researcher wearing lightweight augmented-reality glasses tests an energy-system prototype with a university research team." width="1672" height="941" loading="lazy" />
+        <figcaption><span>Evidence in practice</span> Emerging interfaces become useful when people can test, observe and improve real performance.</figcaption>
       </figure>
       <section className="source-section">
         <div className="source-intro"><div className="section-index">Current research agenda</div><h2>Five tracks with portfolio applications.</h2></div>

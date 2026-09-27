@@ -19,6 +19,10 @@ export default function ArchitecturePage() {
         <h1>Seven layers. One coherent system.</h1>
         <p>Each layer answers a different institutional requirement. NBG assembles only the layers the problem needs, with technology selected after outcomes, evidence and responsibilities are clear.</p>
       </section>
+      <figure className="source-image-band source-image-band-compute">
+        <img src="/images/nbg-ai-compute-infrastructure-v1.png" alt="Two infrastructure engineers inspect liquid-cooled AI compute systems in a secure high-performance computing facility." width="1672" height="941" loading="lazy" />
+        <figcaption><span>Physical intelligence infrastructure</span> Compute, power, cooling and observability become institutional questions when systems must operate reliably at scale.</figcaption>
+      </figure>
       <section className="source-section">
         <div className="source-intro"><div className="section-index">Interactive architecture</div><h2>Inspect what each layer contributes.</h2></div>
         <ArchitectureExplorer />

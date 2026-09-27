@@ -29,6 +29,19 @@ export default function ContentStudioPage() {
           carry clear rights, meaningful participation and a measurable purpose.
         </p>
       </section>
+      <figure className="source-image-band source-image-band-studio">
+        <img
+          src="/images/nbg-content-simulation-studio-v1.png"
+          alt="A Black male creative director guides a diverse production team testing an interactive story inside a virtual production studio."
+          width="1672"
+          height="941"
+          loading="lazy"
+        />
+        <figcaption>
+          <span>Content as simulation</span> Story worlds become spaces to test
+          decisions, participation and learning before larger productions.
+        </figcaption>
+      </figure>
       <ContentStudio />
       <section className="source-next">
         <div>

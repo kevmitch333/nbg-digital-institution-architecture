@@ -1700,6 +1700,12 @@ textarea:focus-visible {
 .source-image-band-right img {
   object-position: center 38%;
 }
+.source-image-band-compute img {
+  object-position: center 48%;
+}
+.source-image-band-studio img {
+  object-position: center 46%;
+}
 .source-image-band figcaption {
   padding-left: var(--page-gutter);
   padding-right: var(--page-gutter);
@@ -2630,6 +2636,12 @@ textarea:focus-visible {
   }
   .source-image-band-right img {
     object-position: 35% 38%;
+  }
+  .source-image-band-compute img {
+    object-position: 54% center;
+  }
+  .source-image-band-studio img {
+    object-position: 42% center;
   }
   .source-image-band figcaption,
   .venture-hero-image figcaption {
