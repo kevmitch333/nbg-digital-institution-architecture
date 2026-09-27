@@ -7,7 +7,7 @@ const directory = [
   ['Architecture', '/architecture'],
   ['Ventures', '/ventures'],
   ['Research', '/research'],
-  ['Content Studio', '/#content-studio'],
+  ['Content Studio', '/content-studio'],
   ['About NBG', '/about'],
   ['Kevin Mitchell', '/founder'],
   ['Partnerships', '/partnerships'],

@@ -43,6 +43,7 @@ jobs:
           test -f out/index.html
           test -f out/founder/index.html
           test -f out/advisory/index.html
+          test -f out/content-studio/index.html
           test -f out/404.html
           test "$(find out/ventures -mindepth 2 -maxdepth 2 -name index.html | wc -l)" -eq 4
 

@@ -2922,3 +2922,218 @@ textarea:focus-visible {
     padding-left: 0;
   }
 }
+
+/* Editorial homepage: overview first, depth on demand. */
+.home-thesis .section-link,
+.home-model > .section-link,
+.home-portfolio > .section-link {
+  margin-top: 34px;
+}
+.home-portfolio,
+.home-gateways,
+.home-founder,
+.home-partner {
+  padding: 112px clamp(24px, 5vw, 84px);
+}
+.home-portfolio,
+.home-founder {
+  background: #f1efe8;
+  color: #101117;
+}
+.home-portfolio .section-index,
+.home-founder .section-index,
+.home-portfolio .section-head > p,
+.home-founder p {
+  color: #5f616a;
+}
+.home-portfolio h2,
+.home-gateways h2,
+.home-founder h2,
+.home-partner h2 {
+  font:
+    400 clamp(42px, 5.4vw, 76px)/1.04 Georgia,
+    serif;
+  letter-spacing: -0.04em;
+  margin: 18px 0 22px;
+}
+.home-venture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #c9c7bf;
+  margin-top: 54px;
+}
+.home-venture-card {
+  color: inherit;
+  min-height: 330px;
+  padding: 26px 24px 24px 0;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.home-venture-card + .home-venture-card {
+  border-left: 1px solid #c9c7bf;
+  padding-left: 24px;
+}
+.home-venture-number {
+  color: #777972;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+.home-venture-card .status {
+  margin-top: 30px;
+}
+.home-venture-card h3 {
+  font:
+    400 30px/1.1 Georgia,
+    serif;
+  margin: 18px 0 12px;
+}
+.home-venture-card p {
+  color: #5f616a;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.home-venture-card .detail-link {
+  margin-top: auto;
+}
+.home-gateways {
+  background: #0c0d12;
+}
+.gateway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  margin-top: 54px;
+}
+.gateway-card {
+  color: inherit;
+  min-height: 290px;
+  padding: 28px 30px 28px 0;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.gateway-card:nth-child(3n + 2),
+.gateway-card:nth-child(3n + 3) {
+  border-left: 1px solid var(--line);
+  padding-left: 30px;
+}
+.gateway-card:nth-child(n + 4) {
+  border-top: 1px solid var(--line);
+}
+.gateway-card > span:first-child {
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+.gateway-card h3 {
+  font:
+    400 28px/1.15 Georgia,
+    serif;
+  margin: 34px 0 14px;
+}
+.gateway-card p {
+  color: #aeb0ba;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 360px;
+}
+.gateway-card .detail-link {
+  margin-top: auto;
+}
+.home-founder,
+.home-partner {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) 2fr;
+  gap: 8vw;
+}
+.home-founder > div:last-child {
+  max-width: 920px;
+}
+.home-founder p {
+  font-size: 17px;
+  line-height: 1.75;
+  max-width: 760px;
+}
+.home-partner {
+  background: #11131a;
+  align-items: end;
+}
+.home-partner > div:last-child {
+  max-width: 660px;
+}
+.home-partner p {
+  color: #b6b8c4;
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0 0 32px;
+}
+.content-studio-page .content-studio {
+  padding-top: 72px;
+}
+.content-studio-page .studio-intro > div:last-child h2,
+.content-studio-page .studio-intro > div:last-child > p:first-of-type {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .home-venture-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .home-venture-card:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .home-venture-card:nth-child(n + 3) {
+    border-top: 1px solid #c9c7bf;
+  }
+  .gateway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .gateway-card:nth-child(3n + 3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .gateway-card:nth-child(even) {
+    border-left: 1px solid var(--line);
+    padding-left: 30px;
+  }
+  .gateway-card:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+}
+@media (max-width: 700px) {
+  .home-portfolio,
+  .home-gateways,
+  .home-founder,
+  .home-partner {
+    padding: 78px 22px;
+  }
+  .home-venture-grid,
+  .gateway-grid,
+  .home-founder,
+  .home-partner {
+    grid-template-columns: 1fr;
+  }
+  .home-venture-card,
+  .gateway-card {
+    min-height: 250px;
+  }
+  .home-venture-card + .home-venture-card,
+  .gateway-card:nth-child(even),
+  .gateway-card:nth-child(3n + 2) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .home-venture-card:nth-child(n + 2),
+  .gateway-card:nth-child(n + 2) {
+    border-top: 1px solid;
+  }
+  .home-founder,
+  .home-partner {
+    gap: 26px;
+  }
+}

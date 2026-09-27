@@ -10,7 +10,7 @@ const navigation = [
   ['Architecture', '/architecture'],
   ['Ventures', '/ventures'],
   ['Research', '/research'],
-  ['Content Studio', '/#content-studio'],
+  ['Content Studio', '/content-studio'],
   ['About', '/about'],
 ] as const;
 
