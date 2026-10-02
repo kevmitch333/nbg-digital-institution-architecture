@@ -50,6 +50,7 @@ jobs:
       - name: Publish finished files to hostinger-deploy
         shell: bash
         run: |
+          cp scripts/verify-public-release.mjs "$RUNNER_TEMP/verify-public-release.mjs"
           cp -a out/. "$RUNNER_TEMP/hostinger-site"
           git switch --orphan hostinger-deploy
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
@@ -59,3 +60,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Deploy ${GITHUB_SHA}"
           git push --force origin hostinger-deploy
+
+      - name: Verify public deployment
+        timeout-minutes: 12
+        run: node "$RUNNER_TEMP/verify-public-release.mjs"

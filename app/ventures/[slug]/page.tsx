@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from '@/components/durable-link';
 import { notFound } from 'next/navigation';
@@ -19,21 +20,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const v = portfolio.find((x) => x.slug === slug);
   return v
-    ? {
-        title: `${v.name} | NBG Portfolio`,
-        description: v.description,
-        openGraph: {
-          title: `${v.name} | NBG Portfolio`,
-          description: v.description,
-          images: [],
-        },
-        twitter: {
-          card: 'summary',
-          title: `${v.name} | NBG Portfolio`,
-          description: v.description,
-          images: [],
-        },
-      }
+    ? pageMetadata(
+        `/ventures/${v.slug}/`,
+        `${v.name} | NBG Portfolio`,
+        v.description,
+      )
     : { title: 'Portfolio | NBG' };
 }
 export default async function VenturePage({

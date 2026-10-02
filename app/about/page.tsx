@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ArrowUpRight } from 'lucide-react';
 import { SourcePageNav } from '@/components/source-page-nav';
 
-export const metadata: Metadata = {
-  title: 'About National Brand Group',
-  description: 'National Brand Group is an Institution Studio for the Intelligence Economy founded by Kevin Mitchell.',
-};
+export const metadata = pageMetadata(
+  '/about/',
+  'About National Brand Group',
+  'National Brand Group is an Institution Studio for the Intelligence Economy founded by Kevin Mitchell.',
+);
 
 const commitments = [
   ['Human-led', 'Consequential decisions remain accountable to people.'],

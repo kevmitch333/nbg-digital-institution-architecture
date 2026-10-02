@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ArrowUpRight, MoveRight } from 'lucide-react';
 import { SourcePageNav } from '@/components/source-page-nav';
 
-export const metadata: Metadata = {
-  title: 'The NBG Model | National Brand Group',
-  description: 'How National Brand Group identifies institutional gaps and advances evidence-backed ventures and shared infrastructure.',
-};
+export const metadata = pageMetadata(
+  '/model/',
+  'The NBG Model | National Brand Group',
+  'How National Brand Group identifies institutional gaps and advances evidence-backed ventures and shared infrastructure.',
+);
 
 const pillars = [
   ['01', 'Intelligence', 'Capability to understand, reason, coordinate and act.'],

@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ArrowUpRight } from 'lucide-react';
 import { PortfolioGrid } from '@/components/portfolio-grid';
 import { SourcePageNav } from '@/components/source-page-nav';
 
-export const metadata: Metadata = {
-  title: 'Venture Portfolio | National Brand Group',
-  description:
-    'Explore four focused NBG initiatives across human–AI performance, patient-centered intelligence, Cabo Verde development and esports.',
-};
+export const metadata = pageMetadata(
+  '/ventures/',
+  'Venture Portfolio | National Brand Group',
+  'Explore four focused NBG initiatives across human–AI performance, patient-centered intelligence, Cabo Verde development and esports.',
+);
 
 export default function VenturesPage() {
   return (

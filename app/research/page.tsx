@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ArrowUpRight } from 'lucide-react';
 import { SourcePageNav } from '@/components/source-page-nav';
 import { researchTracks } from '@/content/site';
 
-export const metadata: Metadata = {
-  title: 'Research & Prototyping | National Brand Group',
-  description: 'NBG research tracks for trustworthy intelligence, rights, settlement, community funding and creator economics.',
-};
+export const metadata = pageMetadata(
+  '/research/',
+  'Research & Prototyping | National Brand Group',
+  'NBG research tracks for trustworthy intelligence, rights, settlement, community funding and creator economics.',
+);
 
 const principles = [
   ['Question before product', 'Define the institutional uncertainty before selecting a tool or business model.'],

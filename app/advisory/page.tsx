@@ -1,13 +1,13 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ArrowUpRight } from 'lucide-react';
 import { advisoryServices } from '@/content/site';
 import { SourcePageNav } from '@/components/source-page-nav';
-export const metadata: Metadata = {
-  title: 'Strategic Advisory | National Brand Group',
-  description:
-    'Institutional strategy for organizations operating where technology is moving faster than the systems around it.',
-};
+export const metadata = pageMetadata(
+  '/advisory/',
+  'Strategic Advisory | National Brand Group',
+  'Institutional strategy for organizations operating where technology is moving faster than the systems around it.',
+);
 export default function Advisory() {
   return (
     <main id="main-content" className="detail-page">

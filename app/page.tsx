@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import {
   ArrowDownRight,
@@ -9,6 +10,12 @@ import {
 } from 'lucide-react';
 import { HomeHeader } from '@/components/home-header';
 import { portfolio } from '@/content/site';
+
+export const metadata = pageMetadata(
+  '/',
+  'National Brand Group | Institution Studio',
+  'National Brand Group designs the institutional infrastructure that helps emerging categories become trusted, functioning markets.',
+);
 
 const pillars = [
   ['Intelligence', 'Understand, reason, coordinate and act.', Sparkles],

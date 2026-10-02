@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ArrowUpRight } from 'lucide-react';
 import { PartnershipIntake } from '@/components/partnership-intake';
 import { SourcePageNav } from '@/components/source-page-nav';
 
-export const metadata: Metadata = {
-  title: 'Partnerships | National Brand Group',
-  description: 'Partnership pathways for institutions, operators, technology companies, investors, communities and research collaborators.',
-};
+export const metadata = pageMetadata(
+  '/partnerships/',
+  'Partnerships | National Brand Group',
+  'Partnership pathways for institutions, operators, technology companies, investors, communities and research collaborators.',
+);
 
 const paths = [
   ['Technology partners', 'Contribute platforms, infrastructure, engineering or technical validation.'],

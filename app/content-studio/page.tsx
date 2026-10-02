@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ArrowUpRight } from 'lucide-react';
 import { ContentStudio } from '@/components/content-studio';
 import { SourcePageNav } from '@/components/source-page-nav';
 
-export const metadata: Metadata = {
-  title: 'Content Studio | National Brand Group',
-  description:
-    'Original media, participatory experiences and learning simulations developed through the National Brand Group Institution Studio.',
-};
+export const metadata = pageMetadata(
+  '/content-studio/',
+  'Content Studio | National Brand Group',
+  'Original media, participatory experiences and learning simulations developed through the National Brand Group Institution Studio.',
+);
 
 export default function ContentStudioPage() {
   return (

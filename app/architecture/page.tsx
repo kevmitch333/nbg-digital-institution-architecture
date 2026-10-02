@@ -1,14 +1,15 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ArrowUpRight } from 'lucide-react';
 import { ArchitectureExplorer } from '@/components/architecture-explorer';
 import { SourcePageNav } from '@/components/source-page-nav';
 import { architectureLayers } from '@/content/site';
 
-export const metadata: Metadata = {
-  title: 'Digital Institution Architecture | National Brand Group',
-  description: 'The seven-layer architecture NBG uses to assemble trustworthy systems for emerging markets.',
-};
+export const metadata = pageMetadata(
+  '/architecture/',
+  'Digital Institution Architecture | National Brand Group',
+  'The seven-layer architecture NBG uses to assemble trustworthy systems for emerging markets.',
+);
 
 export default function ArchitecturePage() {
   return (

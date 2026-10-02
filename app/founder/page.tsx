@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from '@/components/durable-link';
 import { ExternalLink } from 'lucide-react';
 import { CareerRecordTabs } from '@/components/career-record-tabs';
 import { SourcePageNav } from '@/components/source-page-nav';
 
-export const metadata: Metadata = {
-  title: 'Kevin Mitchell | Founder, National Brand Group',
-  description:
-    'Kevin Mitchell is a founder, venture architect and educator with three decades of experience across music, media, corporate innovation, esports, education and AI-era institution building.',
-};
+export const metadata = pageMetadata(
+  '/founder/',
+  'Kevin Mitchell | Founder, National Brand Group',
+  'Kevin Mitchell is a founder, venture architect and educator with three decades of experience across music, media, corporate innovation, esports, education and AI-era institution building.',
+);
 
 const chapters: Array<{
   number: string;
