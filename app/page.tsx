@@ -1,26 +1,293 @@
-import Link from 'next/link';
-import { ArrowDownRight,ArrowUpRight,Check,MoveRight } from 'lucide-react';
-import { ArchitectureExplorer } from '@/components/architecture-explorer';
-import { PartnershipIntake } from '@/components/partnership-intake';
-import { PortfolioGrid } from '@/components/portfolio-grid';
-import { FAQ } from '@/components/faq';
-import { advisoryServices,researchTracks } from '@/content/site';
-const pillars=['Intelligence','Trust','Ownership','Governance'];
-const pillarCopy=['Capability to understand, reason, coordinate and act.','Evidence, verification and standards that enable adoption.','Rights, provenance and participation in created value.','Rules, oversight and accountability that create legitimacy.'];
-const foundry=['Opportunity','Institutional gap','Architecture','Validation','Partners & community','Evidence','Sustainable economics','Stewardship'];
-export default function Home(){return <main>
-  <header className="site-header"><Link className="wordmark" href="/" aria-label="National Brand Group home"><span className="mark" aria-hidden="true">N</span><span>National Brand Group</span></Link><nav aria-label="Primary navigation"><a href="#model">Model</a><a href="#advisory">Advisory</a><a href="#architecture">Architecture</a><a href="#ventures">Ventures</a><a href="#about">About</a></nav><a className="header-cta" href="#partner">Build with us <ArrowUpRight size={15}/></a></header>
-  <section className="hero" aria-labelledby="hero-title"><div className="hero-grid" aria-hidden="true"/><div className="eyebrow"><span/> Institution Studio for the Intelligence Economy</div><h1 id="hero-title">Build the institutions<br/>the future requires.</h1><div className="hero-lower"><p>National Brand Group designs the intelligence, trust, ownership, governance and economic infrastructure that helps emerging categories become functioning markets.</p><div className="hero-actions"><a className="button primary" href="#model">Explore the NBG model <ArrowDownRight size={17}/></a><a className="button ghost" href="#partner">Build with us <ArrowUpRight size={17}/></a></div></div><div className="system-map" aria-hidden="true"><div className="orbit orbit-one"/><div className="orbit orbit-two"/>{pillars.map((p,i)=><span className={`node n${i+1}`} key={p}>{p}</span>)}<span className="core">NBG<small>INSTITUTION<br/>ARCHITECTURE</small></span></div><a className="text-link" href="#ventures">Explore our ventures <ArrowUpRight size={14}/></a></section>
-  <section className="problem" id="model"><div className="section-index">01 / THE INSTITUTIONAL GAP</div><div><h2>Innovation moves faster<br/>than institutions.</h2><p>New technologies can emerge in months. The systems required to govern them often take decades. Standards. Credentials. Rights. Measurement. Governance. Education. Economic systems. NBG works inside that gap.</p></div><div className="bridge" role="img" aria-label="NBG infrastructure connects emerging technology to a trusted functioning market"><span>Technology</span><div><i/><b>NBG infrastructure</b><i/></div><span>Market</span></div></section>
-  <section className="formula"><div className="section-index">02 / THE NBG MODEL</div><h2>A reusable architecture<br/>for emerging institutions.</h2><div className="pillars">{pillars.map((p,i)=><article key={p}><span>0{i+1}</span><h3>{p}</h3><p>{pillarCopy[i]}</p></article>)}</div><div className="rails"><span>Supported by</span><strong>Economic &amp; Participation Rails</strong><span>Payments · settlement · royalties · commerce · community funding</span></div></section>
-  <section className="foundry"><div className="section-head"><div className="section-index">03 / HOW NBG BUILDS</div><h2>The Foundry Model.</h2><p>An idea does not become an institution because it has a compelling name. It advances through evidence, governance and disciplined construction.</p></div><div className="foundry-flow" role="list" aria-label="NBG Foundry Model">{foundry.map((x,i)=><div role="listitem" key={x}><span>{String(i+1).padStart(2,'0')}</span><strong>{x}</strong>{i<foundry.length-1&&<MoveRight aria-hidden="true"/>}</div>)}</div><div className="foundry-principles"><p><strong>Human-led.</strong> Consequential decisions remain accountable to people.</p><p><strong>Technology-agnostic.</strong> Tools are selected after the problem is understood.</p><p><strong>Evidence-directed.</strong> Concepts earn investment by producing learning and proof.</p></div></section>
-  <section className="advisory" id="advisory"><div className="section-head"><div className="section-index">04 / STRATEGIC ADVISORY</div><h2>Work inside the<br/>institutional gap.</h2><p>NBG helps organizations determine what an emerging market needs beyond a product—and how those systems can be assembled responsibly.</p></div><div className="advisory-cards">{advisoryServices.map(([n,title,desc])=><article key={n}><span>{n}</span><h3>{title}</h3><p>{desc}</p></article>)}</div><Link className="section-link" href="/advisory">Explore Strategic Advisory <ArrowUpRight size={15}/></Link></section>
-  <section className="architecture section-dark" id="architecture"><div className="section-head"><div className="section-index">05 / DIGITAL INSTITUTION ARCHITECTURE</div><h2>Seven layers.<br/>Assembled for the problem.</h2><p>Not every institution requires every layer. NBG assembles the architecture appropriate to the problem.</p></div><ArchitectureExplorer/></section>
-  <section className="ventures" id="ventures"><div className="section-head"><div className="section-index">06 / PORTFOLIO AS PROOF</div><h2>Different stages.<br/>Shared architecture.</h2><p>The portfolio now distinguishes strategic priorities, architecture extensions and developing concepts. Every initiative shows its stage and evidence status.</p></div><PortfolioGrid/></section>
-  <section className="ownership"><div className="section-index">07 / OWNERSHIP &amp; SETTLEMENT</div><div className="split-copy"><div><h2>The Intelligence Economy needs an ownership layer.</h2><p>Infrastructure for a world where intelligence, rights and economic participation increasingly move across digital systems.</p></div><div className="questions">{['Who created this?','Who contributed?','Who owns it?','Who may use it?','How should value be distributed?'].map(x=><p key={x}><Check size={14}/>{x}</p>)}</div></div><div className="distinction"><div><span>Not our focus</span><strong>Speculation</strong><p>Token prices, trading interfaces or ideology.</p></div><MoveRight/><div><span>Our focus</span><strong>Infrastructure</strong><p>Identity, attestations, rights, licensing, royalties and appropriate settlement.</p></div></div><blockquote>“If a conventional database or payment system solves the problem better, use it.”</blockquote><p className="chain-note">Blockchain is one optional, chain-agnostic infrastructure choice—evaluated only where it creates a material advantage in verification, provenance, rights, settlement or cross-organizational trust.</p></section>
-  <section className="lab" id="research"><div className="section-head"><span className="status">Research + Prototyping</span><div className="section-index">08 / NBG DIGITAL ASSET INFRASTRUCTURE LAB</div><h2>Questions before products.</h2><p>A shared research capability supporting existing NBG ventures—not a standalone venture.</p></div><div className="research-list">{researchTracks.map(([n,title,context,q])=><article key={n}><span>{n}</span><div><h3>{title}</h3><small>{context}</small></div><p>{q}</p></article>)}</div></section>
-  <section className="about" id="about"><div className="section-index">09 / ABOUT NBG</div><div><h2>Institution building across culture, technology and markets.</h2><p>National Brand Group operates at the intersection of research, standards, technology, venture creation and strategic partnership. Founder Kevin Mitchell brings a cross-disciplinary perspective spanning culture, media, education, esports, AI and venture development.</p><p className="founder-role">Kevin Mitchell <span>Founder · Venture Architect · Institution Builder</span></p><Link className="section-link" href="/founder">Explore the verified founder record <ArrowUpRight size={15}/></Link></div></section>
-  <section className="faq"><div className="section-head"><div className="section-index">10 / FREQUENTLY ASKED</div><h2>Clear questions.<br/>Grounded answers.</h2><p>How the Institution Studio model, portfolio stages and technology choices work.</p></div><FAQ/></section>
-  <section className="partner" id="partner"><div className="partner-intro"><div className="section-index">11 / PARTNERSHIP ENGINE</div><h2>What institution<br/>does your market need?</h2><p>NBG collaborates with technology companies, universities, operators, investors and institutions building the infrastructure of emerging markets.</p><p className="ecosystem-note">We don’t need to build every layer ourselves. The next generation of institutions will be assembled through ecosystems.</p></div><PartnershipIntake/></section>
-  <footer><div className="wordmark"><span className="mark">N</span><span>National Brand Group</span></div><p>Institution Studio for the Intelligence Economy</p><a href="mailto:hello@nationalbrandgroup.com">Contact NBG <ArrowUpRight size={14}/></a><small>© {new Date().getFullYear()} National Brand Group. Exploratory initiatives and prototype architectures are labeled throughout.</small></footer>
-</main>}
+import { pageMetadata } from '@/lib/seo';
+import Link from '@/components/durable-link';
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+  Fingerprint,
+  Scale,
+  ShieldCheck,
+  Sparkles,
+} from 'lucide-react';
+import { HomeHeader } from '@/components/home-header';
+import { portfolio } from '@/content/site';
+
+export const metadata = pageMetadata(
+  '/',
+  'National Brand Group | Institution Studio',
+  'National Brand Group designs the institutional infrastructure that helps emerging categories become trusted, functioning markets.',
+);
+
+const pillars = [
+  ['Intelligence', 'Understand, reason, coordinate and act.', Sparkles],
+  ['Trust', 'Build evidence, verification and standards.', ShieldCheck],
+  ['Ownership', 'Clarify rights, provenance and participation.', Fingerprint],
+  ['Governance', 'Create oversight, accountability and legitimacy.', Scale],
+] as const;
+
+const gateways = [
+  [
+    '01',
+    'The NBG Model',
+    'How ideas advance through evidence, governance and disciplined construction.',
+    '/model',
+  ],
+  [
+    '02',
+    'Strategic Advisory',
+    'Architecture for organizations working inside emerging categories and markets.',
+    '/advisory',
+  ],
+  [
+    '03',
+    'Institution Architecture',
+    'Seven interoperable layers assembled around the problem—not the technology.',
+    '/architecture',
+  ],
+  [
+    '04',
+    'Research Agenda',
+    'Questions that test the infrastructure required for trusted participation.',
+    '/research',
+  ],
+  [
+    '05',
+    'Content Studio',
+    'Stories, simulations and participatory worlds built with clear rights and purpose.',
+    '/content-studio',
+  ],
+  [
+    '06',
+    'About NBG',
+    'The operating history and point of view behind the Institution Studio.',
+    '/about',
+  ],
+] as const;
+
+export default function Home() {
+  return (
+    <main id="main-content">
+      <HomeHeader />
+      <section className="hero" aria-labelledby="hero-title">
+        <img
+          className="hero-image"
+          src="/images/nbg-institution-architecture-hero-v2.jpg"
+          alt="A multidisciplinary team maps an interconnected institutional system across a large digital wall in an advanced design studio."
+          width="1672"
+          height="941"
+          fetchPriority="high"
+        />
+        <div className="hero-image-shade" aria-hidden="true" />
+        <div className="hero-grid" aria-hidden="true" />
+        <div className="eyebrow">
+          <span /> Institution Studio for the Intelligence Economy
+        </div>
+        <h1 id="hero-title">
+          Build the institutions
+          <br />
+          the future requires.
+        </h1>
+        <div className="hero-lower">
+          <p>
+            National Brand Group designs the intelligence, trust, ownership,
+            governance and economic infrastructure that helps emerging
+            categories become functioning markets.
+          </p>
+          <div className="hero-actions">
+            <Link className="button primary" href="/model">
+              Explore the NBG model <ArrowDownRight size={17} />
+            </Link>
+            <Link className="button ghost" href="/partnerships">
+              Build with us <ArrowUpRight size={17} />
+            </Link>
+          </div>
+        </div>
+        <Link className="text-link" href="/ventures">
+          Explore our ventures <ArrowUpRight size={14} />
+        </Link>
+      </section>
+      <div className="hero-visual-spacer" aria-hidden="true">
+        <span />
+      </div>
+      <section className="home-visual-story" aria-label="NBG work in practice">
+        <figure className="visual-story-primary">
+          <img
+            src="/images/nbg-civic-infrastructure-review-v1.png"
+            alt="An African civic innovation leader reviews plans with a multidisciplinary team at a public infrastructure site."
+            width="1672"
+            height="941"
+          />
+          <figcaption>
+            <span>Strategy + intelligence</span>Build shared understanding
+            before selecting the system.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/images/public-space-content-creator.webp"
+            alt="A content creator filming in an active public space."
+            width="1672"
+            height="941"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>Culture + participation</span>Connect new infrastructure to
+            the people who will use it.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/images/college-drone-coaching.webp"
+            alt="A college drone-racing student and coach working together."
+            width="1672"
+            height="941"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>Learning + performance</span>Turn emerging capability into
+            evidence and opportunity.
+          </figcaption>
+        </figure>
+      </section>
+      <section className="problem home-thesis" id="model">
+        <div className="section-index">01 / THE INSTITUTIONAL GAP</div>
+        <div>
+          <h2>
+            Innovation moves faster
+            <br />
+            than institutions.
+          </h2>
+          <p>
+            New technologies can emerge in months. The systems required to
+            govern them often take decades. NBG works inside that gap—connecting
+            capability to the standards, rights, evidence and participation
+            systems a functioning market requires.
+          </p>
+          <Link className="section-link" href="/model">
+            Read the institutional thesis <ArrowUpRight size={15} />
+          </Link>
+        </div>
+      </section>
+      <section className="formula home-model">
+        <div className="section-index">02 / THE NBG MODEL</div>
+        <h2>
+          A reusable architecture
+          <br />
+          for emerging institutions.
+        </h2>
+        <div className="pillars">
+          {pillars.map(([title, copy, Icon], index) => (
+            <article key={title}>
+              <div className="concept-marker">
+                <span>0{index + 1}</span>
+                <Icon size={19} strokeWidth={1.35} aria-hidden="true" />
+              </div>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+        <Link className="section-link" href="/model">
+          Explore the full NBG model <ArrowUpRight size={15} />
+        </Link>
+      </section>
+      <section className="home-portfolio" id="ventures">
+        <div className="section-head">
+          <div className="section-index">03 / PORTFOLIO AS PROOF</div>
+          <h2>
+            Four focused ventures.
+            <br />
+            Shared architecture.
+          </h2>
+          <p>
+            Each initiative applies the Institution Studio method to a distinct
+            market, community and development path.
+          </p>
+        </div>
+        <div className="home-venture-grid">
+          {portfolio.map((venture, index) => (
+            <Link
+              href={`/ventures/${venture.slug}`}
+              className="home-venture-card"
+              key={venture.slug}
+            >
+              <span className="home-venture-number">0{index + 1}</span>
+              <span className="status">{venture.stage}</span>
+              <h3>{venture.name}</h3>
+              <p>{venture.category}</p>
+              <span className="detail-link">
+                Explore venture <ArrowUpRight size={15} />
+              </span>
+            </Link>
+          ))}
+        </div>
+        <Link className="section-link" href="/ventures">
+          View the complete portfolio <ArrowUpRight size={15} />
+        </Link>
+      </section>
+      <section className="home-gateways">
+        <div className="section-head">
+          <div className="section-index">
+            04 / EXPLORE THE INSTITUTION STUDIO
+          </div>
+          <h2>
+            Choose the depth
+            <br />
+            you need.
+          </h2>
+          <p>
+            The homepage introduces the system. Each section below opens a
+            focused reading path.
+          </p>
+        </div>
+        <div className="gateway-grid">
+          {gateways.map(([number, title, copy, href]) => (
+            <Link href={href} className="gateway-card" key={title}>
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+              <span className="detail-link">
+                Explore section <ArrowUpRight size={15} />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="home-founder">
+        <div className="section-index">
+          05 / FOUNDER &amp; INSTITUTION BUILDER
+        </div>
+        <div>
+          <h2>Experience across culture, technology and markets.</h2>
+          <p>
+            Founder Kevin Mitchell brings an operating history spanning music,
+            film and television, corporate strategy, collegiate esports, higher
+            education, AI and venture development.
+          </p>
+          <Link className="section-link" href="/founder">
+            Meet Kevin Mitchell <ArrowUpRight size={15} />
+          </Link>
+        </div>
+      </section>
+      <section className="home-partner">
+        <div>
+          <div className="section-index">06 / BUILD WITH NBG</div>
+          <h2>
+            What institution
+            <br />
+            does your market need?
+          </h2>
+        </div>
+        <div>
+          <p>
+            NBG collaborates with technology companies, universities, operators,
+            investors and institutions building the infrastructure of emerging
+            markets.
+          </p>
+          <Link className="button primary" href="/partnerships">
+            Start a conversation <ArrowUpRight size={15} />
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}
