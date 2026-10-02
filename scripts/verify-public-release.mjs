@@ -5,9 +5,9 @@ const get = url => fetch(url, { signal: AbortSignal.timeout(20000), headers: { '
 let ready = false;
 for (let attempt = 1; attempt <= 30; attempt++) {
   try {
-    const response = await get(origin + '/?verify=site-audit-20261002');
+    const response = await get(origin + '/?verify=site-audit-' + Date.now());
     const html = await response.text();
-    ready = response.ok && html.includes('rel="canonical" href="https://nationalbrandgroup.com/"') && requiredHeaders.every(header => response.headers.has(header));
+    ready = response.ok && html.includes('rel="canonical" href="https://nationalbrandgroup.com/"') && requiredHeaders.every(header => response.headers.has(header)) && (response.headers.get('content-security-policy') || '').includes('base-uri');
     console.log(JSON.stringify({ attempt, status: response.status, ready, headers: Object.fromEntries(requiredHeaders.map(h => [h, response.headers.get(h)])) }));
     if (ready) break;
   } catch (error) { console.log('Waiting for deployment:', error.message); }
