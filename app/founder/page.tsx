@@ -72,9 +72,9 @@ const currentBuilds = [
     'Patient-centered AI assurance and clinical review pathways',
   ],
   [
-    'Tubaron / Cabo Verde',
-    '/ventures/tubaron-cabo-verde',
-    'Sport, culture, education and diaspora participation infrastructure',
+    'College Company',
+    '/ventures/college-company',
+    'Collegiate IP, media, education and commercialization strategy',
   ],
   [
     'EsportsX',

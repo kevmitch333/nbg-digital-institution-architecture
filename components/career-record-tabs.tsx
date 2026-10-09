@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const careerRecord = [
   {
     title: 'National Brand Group',
-    text: 'Building an Institution Studio for the Intelligence Economy and developing AGONiQ, Patients Intelligence, Tubaron / Cabo Verde and the EsportsX portfolio through research, partnership design and disciplined validation.',
+    text: 'Building an Institution Studio for the Intelligence Economy and developing AGONiQ, Patients Intelligence, College Company and the EsportsX portfolio through research, partnership design and disciplined validation.',
   },
   {
     title: 'Routledge Handbook of Esports',
