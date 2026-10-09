@@ -37,7 +37,7 @@ export function ContentStudio() {
           <p>Small demonstrations would test creative quality, participation and learning before larger productions or persistent worlds.</p>
         </div>
         <div className="studio-pilot-list">
-          <article><h4>Cabo Verde story world</h4><p>A focused cultural journey connecting football, island life and diaspora stories through one location, a central character and a few meaningful choices. Developed with cultural contributors and clear attribution.</p></article>
+          <article><h4>College Company campus story world</h4><p>A focused campus journey connecting student creators, competition, learning and commercial readiness through one setting, a central participant and a few meaningful choices. Developed with clear permissions and contributor attribution.</p></article>
           <article><h4>AGONiQ performance scenarios</h4><p>Repeatable simulations for human–AI collaboration, evidence assessment and strategic decisions, designed to support education, workforce readiness and research.</p></article>
           <article><h4>Chemxcons original universe</h4><p>An early concept for element-inspired characters and serialized vertical dramas, with potential for branching stories and a separate, fact-checked science-learning series.</p></article>
         </div>

@@ -15,9 +15,9 @@ export const ventureImagery: Record<string, VentureImage> = {
     alt: 'A patient leads a collaborative review of prepared health information with a clinician and patient advocate.',
     position: 'center 15%',
   },
-  'tubaron-cabo-verde': {
-    src: '/images/tubaron-community-innovation-v2.webp',
-    alt: 'Cape Verdean students and mentors connect sport, culture, education, and community projects beside a coastal football field.',
+  'college-company': {
+    src: '/images/college-company-innovation-commons-v2.webp',
+    alt: 'College students connect technology, media production and venture design in a campus innovation commons.',
     position: 'center 48%',
   },
   esportsx: {
@@ -34,11 +34,6 @@ export const ventureImagery: Record<string, VentureImage> = {
     src: '/images/cerebran-enterprise-simulation-v2.webp',
     alt: 'A cross-functional enterprise team rehearses a complex decision using scenario cards and a branching operations map.',
     position: 'center 43%',
-  },
-  'the-college-company': {
-    src: '/images/college-company-innovation-commons-v2.webp',
-    alt: 'College students connect technology, media production, and venture design in a campus innovation commons.',
-    position: 'center 48%',
   },
   thehomie: {
     src: '/images/thehomie-family-intelligence-v2.webp',

@@ -7,7 +7,7 @@ import { SourcePageNav } from '@/components/source-page-nav';
 export const metadata = pageMetadata(
   '/ventures/',
   'Venture Portfolio | National Brand Group',
-  'Explore four focused NBG initiatives across human–AI performance, patient-centered intelligence, Cabo Verde development and esports.',
+  'Explore four focused NBG initiatives across human–AI performance, patient-centered intelligence, collegiate commercialization and esports.',
 );
 
 export default function VenturesPage() {
