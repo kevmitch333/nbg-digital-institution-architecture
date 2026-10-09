@@ -1,0 +1,5 @@
+:HL["/_next/static/css/ad10245a071b6c89.css","style"]
+:HL["/_next/static/css/9cb11d02cbb779e2.css","style"]
+:HL["/images/nbg-institution-studio-hero-2026.webp","image",{"fetchPriority":"high"}]
+:HL["/images/nbg-evidence-atlas-2026.webp","image"]
+0:{"buildId":"bISkVh2dNFTLWhEez6fUB","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
