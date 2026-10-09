@@ -10,11 +10,16 @@ const paths = [
 ];
 export function PartnershipIntake() {
   const [path, setPath] = useState('');
+  const [showPathMessage, setShowPathMessage] = useState(false);
   return (
     <form
       className="intake"
       onSubmit={(e) => {
         e.preventDefault();
+        if (!path) {
+          setShowPathMessage(true);
+          return;
+        }
         const data = new FormData(e.currentTarget);
         const field = (name: string) => {
           const value = data.get(name);
@@ -39,7 +44,10 @@ export function PartnershipIntake() {
             <button
               type="button"
               aria-pressed={path === x}
-              onClick={() => setPath(x)}
+              onClick={() => {
+                setPath(x);
+                setShowPathMessage(false);
+              }}
               key={x}
             >
               {x}
@@ -47,6 +55,11 @@ export function PartnershipIntake() {
           ))}
         </div>
       </fieldset>
+      {showPathMessage && (
+        <p className="intake-message" role="alert">
+          Select a partnership path before continuing.
+        </p>
+      )}
       {path && (
         <div className="intake-fields">
           <label>
@@ -69,7 +82,11 @@ export function PartnershipIntake() {
             Continue by email
           </button>
           <p className="intake-note">
-            Opens your email app. This site does not store your information.
+            This opens your email app; the site does not submit or store your
+            information. If it does not open, email{' '}
+            <a href="mailto:hello@nationalbrandgroup.com">
+              hello@nationalbrandgroup.com
+            </a>.
           </p>
         </div>
       )}

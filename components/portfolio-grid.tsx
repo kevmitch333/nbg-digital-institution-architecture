@@ -46,7 +46,7 @@ export function PortfolioGrid() {
               {venture.focus}
             </div>
             <Link className="detail-link" href={`/ventures/${venture.slug}`}>
-              Explore architecture <ArrowUpRight size={15} />
+              Explore {venture.name} <ArrowUpRight size={15} />
             </Link>
           </article>
         ))}

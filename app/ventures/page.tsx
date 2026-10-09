@@ -15,12 +15,12 @@ export default function VenturesPage() {
     <main id="main-content" className="detail-page source-page">
       <SourcePageNav />
       <section className="source-hero">
-        <span className="status">Portfolio as proof</span>
-        <h1>Four ventures. Four paths to institutional value.</h1>
+        <span className="status">Current initiatives</span>
+        <h1>Four initiatives. Four paths to institutional value.</h1>
         <p>
-          Each initiative has its own field, voice and development path—united
-          by disciplined validation, responsible partnership and infrastructure
-          built to last.
+          Each initiative is in active development, with its own field, voice
+          and path—united by disciplined validation, responsible partnership
+          and infrastructure built to last.
         </p>
       </section>
       <section className="source-section portfolio-source">

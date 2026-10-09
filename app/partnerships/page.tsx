@@ -37,7 +37,7 @@ export default function PartnershipsPage() {
         <div className="source-card-grid">{paths.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
       <section className="source-section partnership-source">
-        <div className="source-intro"><div className="section-index">Start a conversation</div><h2>What could we build together?</h2><p>Select the path that best describes you. The form prepares an email in your preferred email application; the site does not store your information.</p></div>
+        <div className="source-intro"><div className="section-index">Start a conversation</div><h2>What could we build together?</h2><p>Select the path that best describes you. The form prepares an email in your preferred email application; it does not submit information to this site. If your email application does not open, write to <a href="mailto:hello@nationalbrandgroup.com">hello@nationalbrandgroup.com</a>.</p></div>
         <PartnershipIntake />
       </section>
       <section className="source-next">

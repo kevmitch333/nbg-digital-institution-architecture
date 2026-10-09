@@ -4,9 +4,12 @@ import { ArrowLeft } from 'lucide-react';
 
 const sectionNavigation = [
   ['Model', '/model'],
+  ['Advisory', '/advisory'],
   ['Architecture', '/architecture'],
   ['Ventures', '/ventures'],
   ['Research', '/research'],
+  ['Content Studio', '/content-studio'],
+  ['About', '/about'],
   ['Partnerships', '/partnerships'],
 ] as const;
 

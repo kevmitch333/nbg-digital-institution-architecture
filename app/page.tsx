@@ -70,8 +70,8 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <img
           className="hero-image"
-          src="/images/nbg-institution-architecture-hero-v2.jpg"
-          alt="A multidisciplinary team maps an interconnected institutional system across a large digital wall in an advanced design studio."
+          src="/images/nbg-institution-studio-hero-2026.webp"
+          alt="A multidisciplinary team works around a table of system maps and printed research in a design studio at dusk."
           width="1672"
           height="941"
           fetchPriority="high"
@@ -79,30 +79,30 @@ export default function Home() {
         <div className="hero-image-shade" aria-hidden="true" />
         <div className="hero-grid" aria-hidden="true" />
         <div className="eyebrow">
-          <span /> Institution Studio for the Intelligence Economy
+          <span /> Institution Studio
         </div>
         <h1 id="hero-title">
-          Build the institutions
+          Build ventures—and the systems
           <br />
-          the future requires.
+          that help them last.
         </h1>
         <div className="hero-lower">
           <p>
-            National Brand Group designs the intelligence, trust, ownership,
-            governance and economic infrastructure that helps emerging
-            categories become functioning markets.
+            National Brand Group develops ventures and works with partners on
+            the strategy, evidence, governance, rights and operating design
+            that emerging markets need to earn trust.
           </p>
           <div className="hero-actions">
-            <Link className="button primary" href="/model">
-              Explore the NBG model <ArrowDownRight size={17} />
+            <Link className="button primary" href="/ventures">
+              See current initiatives <ArrowDownRight size={17} />
             </Link>
             <Link className="button ghost" href="/partnerships">
-              Build with us <ArrowUpRight size={17} />
+              Talk with NBG <ArrowUpRight size={17} />
             </Link>
           </div>
         </div>
         <Link className="text-link" href="/ventures">
-          Explore our ventures <ArrowUpRight size={14} />
+          How the Institution Studio works <ArrowUpRight size={14} />
         </Link>
       </section>
       <div className="hero-visual-spacer" aria-hidden="true">
@@ -111,40 +111,40 @@ export default function Home() {
       <section className="home-visual-story" aria-label="NBG work in practice">
         <figure className="visual-story-primary">
           <img
-            src="/images/nbg-civic-infrastructure-review-v1.png"
-            alt="An African civic innovation leader reviews plans with a multidisciplinary team at a public infrastructure site."
+            src="/images/nbg-evidence-atlas-2026.webp"
+            alt="A multigenerational group builds a shared evidence map with archival photographs, notes and connecting threads."
             width="1672"
             height="941"
           />
           <figcaption>
-            <span>Strategy + intelligence</span>Build shared understanding
-            before selecting the system.
+            <span>Evidence + intelligence</span>Build shared understanding
+            before choosing the system.
           </figcaption>
         </figure>
         <figure>
           <img
-            src="/images/public-space-content-creator.webp"
-            alt="A content creator filming in an active public space."
+            src="/images/nbg-participation-lab-2026.webp"
+            alt="Participants and mentors test a projected learning and performance prototype in an industrial studio."
             width="1672"
             height="941"
             loading="lazy"
           />
           <figcaption>
-            <span>Culture + participation</span>Connect new infrastructure to
-            the people who will use it.
+            <span>Participation + testing</span>Test the system with the
+            people who will use it.
           </figcaption>
         </figure>
         <figure>
           <img
-            src="/images/college-drone-coaching.webp"
-            alt="A college drone-racing student and coach working together."
+            src="/images/nbg-material-library-2026.webp"
+            alt="A material library with system diagrams, acetate overlays, geometric cards and physical objects on a cobalt-blue table."
             width="1672"
             height="941"
             loading="lazy"
           />
           <figcaption>
-            <span>Learning + performance</span>Turn emerging capability into
-            evidence and opportunity.
+            <span>Design + delivery</span>Turn emerging capability into
+            accountable action.
           </figcaption>
         </figure>
       </section>
@@ -192,15 +192,15 @@ export default function Home() {
       </section>
       <section className="home-portfolio" id="ventures">
         <div className="section-head">
-          <div className="section-index">03 / PORTFOLIO AS PROOF</div>
+          <div className="section-index">03 / CURRENT INITIATIVES</div>
           <h2>
-            Four focused ventures.
+            Four initiatives.
             <br />
-            Shared architecture.
+            One institutional discipline.
           </h2>
           <p>
-            Each initiative applies the Institution Studio method to a distinct
-            market, community and development path.
+            Each initiative is in active development, applying the Institution
+            Studio method to a distinct market, community and development path.
           </p>
         </div>
         <div className="home-venture-grid">
@@ -246,7 +246,7 @@ export default function Home() {
               <h3>{title}</h3>
               <p>{copy}</p>
               <span className="detail-link">
-                Explore section <ArrowUpRight size={15} />
+                Open {title} <ArrowUpRight size={15} />
               </span>
             </Link>
           ))}

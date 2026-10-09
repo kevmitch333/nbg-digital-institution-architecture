@@ -1189,6 +1189,17 @@ textarea:focus-visible {
   color: #7f838e;
   font-size: 13px;
 }
+.intake-message {
+  margin: 14px 0 0;
+  color: #ffd08a;
+  font-size: 14px;
+}
+.intake-note a,
+.source-intro a {
+  color: #cdd7ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .success {
   border: 1px solid rgba(64, 212, 230, 0.35);
   padding: 50px;
@@ -1946,9 +1957,9 @@ textarea:focus-visible {
   height: 78px;
   padding: 0 clamp(22px, 5vw, 78px);
   display: grid;
-  grid-template-columns: minmax(110px, 1fr) auto minmax(210px, 1fr);
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: clamp(22px, 4vw, 58px);
+  gap: clamp(18px, 3vw, 42px);
   border-bottom: 1px solid var(--line);
 }
 .detail-nav > a:first-child {
@@ -1963,10 +1974,15 @@ textarea:focus-visible {
 .detail-nav-links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: clamp(16px, 2vw, 28px);
+  justify-content: flex-start;
+  gap: clamp(14px, 1.8vw, 24px);
+  overflow-x: auto;
+  scrollbar-width: thin;
   color: #aeb1bb;
   font-size: 14px;
+}
+.detail-nav-links a {
+  flex: 0 0 auto;
 }
 .detail-nav-links a,
 .detail-nav > a {
@@ -1994,7 +2010,7 @@ textarea:focus-visible {
 }
 @media (max-width: 1100px) {
   .detail-nav {
-    grid-template-columns: minmax(100px, 1fr) auto minmax(190px, 1fr);
+    grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 20px;
   }
   .detail-nav-links {
