@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Check, Copy, Mail } from 'lucide-react';
 const paths = [
   'Technology partner',
   'Institutional partner',
@@ -10,31 +11,43 @@ const paths = [
 ];
 export function PartnershipIntake() {
   const [path, setPath] = useState('');
-  const [showPathMessage, setShowPathMessage] = useState(false);
+  const [inquiry, setInquiry] = useState('');
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const selectedPath = new URLSearchParams(window.location.search).get('path');
+    if (!selectedPath || !paths.includes(selectedPath)) return;
+    const frame = window.requestAnimationFrame(() => setPath(selectedPath));
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+
+  const buildInquiry = (form: HTMLFormElement) => {
+    const data = new FormData(form);
+    const field = (name: string) => {
+      const value = data.get(name);
+      return typeof value === 'string' ? value : '';
+    };
+    return [
+      `Partnership path: ${path}`,
+      `Name: ${field('name')}`,
+      `Organization: ${field('organization')}`,
+      `Email: ${field('email')}`,
+      '',
+      field('message'),
+    ].join('\n');
+  };
+
+  const emailInquiry = () => {
+    const subject = `NBG partnership inquiry — ${path}`;
+    window.location.href = `mailto:hello@nationalbrandgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(inquiry)}`;
+  };
   return (
     <form
       className="intake"
       onSubmit={(e) => {
         e.preventDefault();
-        if (!path) {
-          setShowPathMessage(true);
-          return;
-        }
-        const data = new FormData(e.currentTarget);
-        const field = (name: string) => {
-          const value = data.get(name);
-          return typeof value === 'string' ? value : '';
-        };
-        const subject = `NBG partnership inquiry — ${path}`;
-        const body = [
-          `Partnership path: ${path}`,
-          `Name: ${field('name')}`,
-          `Organization: ${field('organization')}`,
-          `Email: ${field('email')}`,
-          '',
-          field('message'),
-        ].join('\n');
-        window.location.href = `mailto:hello@nationalbrandgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        setInquiry(buildInquiry(e.currentTarget));
+        setCopied(false);
       }}
     >
       <fieldset>
@@ -44,10 +57,7 @@ export function PartnershipIntake() {
             <button
               type="button"
               aria-pressed={path === x}
-              onClick={() => {
-                setPath(x);
-                setShowPathMessage(false);
-              }}
+              onClick={() => setPath(x)}
               key={x}
             >
               {x}
@@ -55,12 +65,7 @@ export function PartnershipIntake() {
           ))}
         </div>
       </fieldset>
-      {showPathMessage && (
-        <p className="intake-message" role="alert">
-          Select a partnership path before continuing.
-        </p>
-      )}
-      {path && (
+      {path && !inquiry && (
         <div className="intake-fields">
           <label>
             Name
@@ -79,16 +84,33 @@ export function PartnershipIntake() {
             <textarea name="message" required rows={4} />
           </label>
           <button className="button primary" type="submit">
-            Continue by email
+            Prepare my inquiry
           </button>
           <p className="intake-note">
-            This opens your email app; the site does not submit or store your
-            information. If it does not open, email{' '}
-            <a href="mailto:hello@nationalbrandgroup.com">
-              hello@nationalbrandgroup.com
-            </a>.
+            You will review your inquiry before sending. This site does not store your information.
           </p>
         </div>
+      )}
+      {inquiry && (
+        <output className="inquiry-ready">
+          <Check size={20} aria-hidden="true" />
+          <div>
+            <strong>Your inquiry is ready.</strong>
+            <p>Send it to hello@nationalbrandgroup.com, or copy it into your preferred email client.</p>
+            <div className="inquiry-actions">
+              <button className="button primary" type="button" onClick={emailInquiry}>
+                Send by email <Mail size={16} />
+              </button>
+              <button className="button ghost" type="button" onClick={async () => {
+                await navigator.clipboard.writeText(inquiry);
+                setCopied(true);
+              }}>
+                {copied ? 'Copied' : 'Copy inquiry'} <Copy size={16} />
+              </button>
+            </div>
+            <button className="intake-reset" type="button" onClick={() => setInquiry('')}>Edit inquiry</button>
+          </div>
+        </output>
       )}
     </form>
   );
